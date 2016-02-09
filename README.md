@@ -1,0 +1,1 @@
+Just a simple project for the subbredit [dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/ ) challenges.
