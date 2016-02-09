@@ -1,1 +1,2 @@
+[![Build Status](https://travis-ci.org/ramonPires/dailyprogrammer.svg?branch=master)](https://travis-ci.org/ramonPires/dailyprogrammer)
 Just a simple project for the subbredit [dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/ ) challenges.
