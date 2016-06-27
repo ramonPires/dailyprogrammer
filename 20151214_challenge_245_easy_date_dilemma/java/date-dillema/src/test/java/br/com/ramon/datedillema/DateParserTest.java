@@ -1,14 +1,14 @@
 package br.com.ramon.datedillema;
 
-import static org.junit.Assert.*;
-
-import java.util.Collection;
-import java.util.Arrays;
 import org.junit.Test;
-import org.junit.Before;
+import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import org.junit.runner.RunWith;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class DateParserTest {

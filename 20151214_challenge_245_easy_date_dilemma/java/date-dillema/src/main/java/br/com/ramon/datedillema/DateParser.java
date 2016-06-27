@@ -1,5 +1,7 @@
 package br.com.ramon.datedillema;
 
+import java.util.Arrays;
+
 public class DateParser{
 
 	public String parse(String date){
@@ -17,28 +19,21 @@ public class DateParser{
 	}
 
 	private String formatPatternYMD(String[] splittedDate){
-		String year = "";
-		String month = "";
-		String day = "";
-		
-		year = formateYear(splittedDate[0]);
+		String year = formateYear(splittedDate[0]);
 
-		month = formateMonth(splittedDate[1]);
-		
-		day = formateDay(splittedDate[2]);
+		String month = formateMonth(splittedDate[1]);
+
+		String day = formateDay(splittedDate[2]);
 
 		return year+"-"+month+"-"+day;
 	}
 
 	private String formatPatternMDY(String[] splittedDate){
-		String year = "";
-		String month = "";
-		String day = "";
-		month = formateMonth(splittedDate[0]);
+		String month = formateMonth(splittedDate[0]);
 		
-		day = formateDay(splittedDate[1]);
+		String day = formateDay(splittedDate[1]);
 
-		year = formateYear(splittedDate[2]);
+		String year = formateYear(splittedDate[2]);
 
 		return year+"-"+month+"-"+day;
 	}
