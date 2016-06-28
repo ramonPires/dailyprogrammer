@@ -1,8 +1,13 @@
-language: java
+language: scala
+
+scala: 
+  - 2.11.2
 
 jdk:
   - oraclejdk8
 
 sudo: false
 
-script: cd 20151214_challenge_245_easy_date_dilemma/java/date-dillema && gradle test
+script: 
+  - cd 20151214_challenge_245_easy_date_dilemma/java/date-dillema && gradle test
+  - cd 20151214_challenge_245_easy_date_dilemma/scala/date-dillema && scala test
