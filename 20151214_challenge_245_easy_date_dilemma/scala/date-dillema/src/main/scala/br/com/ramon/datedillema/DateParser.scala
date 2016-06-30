@@ -12,7 +12,7 @@ class DateParser {
     } else if (splitedDate.head.length == 4){
       formatedDate = formatPatternYMD(splitedDate);
     }
-    return formatedDate
+    formatedDate
   }
 
   private def splitDate(date : String): Array[String] = {
@@ -27,7 +27,7 @@ class DateParser {
     if (date.indexOf(' ') > -1) {
       return date.split(" ");
     }
-    return new Array[String](0)
+    new Array[String](0)
   }
 
   private def formatPatternYMD(splittedDate : Array[String]) : String ={
@@ -37,7 +37,7 @@ class DateParser {
 
     val day = formateDay(splittedDate(2));
 
-    return year+"-"+month+"-"+day;
+    year+"-"+month+"-"+day;
   }
 
   private def formatPatternMDY(splittedDate : Array[String]) : String = {
@@ -46,7 +46,7 @@ class DateParser {
     val day = formateDay(splittedDate(1));
 
     val year = formateYear(splittedDate(2));
-    return year+"-"+month+"-"+day;
+    year+"-"+month+"-"+day;
   }
 
 
@@ -54,28 +54,28 @@ class DateParser {
     if (month.length() <= 2) {
       return formatNumberLowerThan10(month);
     }
-    return month;
+    month;
   }
 
   private def formateDay(day : String) : String = {
     if (day.length() <= 2) {
       return formatNumberLowerThan10(day);
     }
-    return day;
+    day;
   }
 
   private def formateYear(year : String) : String = {
     if (year.length() <= 2) {
       return "20" + formatNumberLowerThan10(year);
     }
-    return year;
+    year;
   }
 
   private def formatNumberLowerThan10(number : String) : String = {
     if (number.length() == 1) {
       return "0" + number;
     }
-    return number;
+    number;
   }
 
 }
