@@ -7,7 +7,9 @@ jdk:
   - oraclejdk8
 
 sudo: false
-
+cache:
+  directories:
+  - $HOME/.m2
 script:
   - cd 20151214_challenge_245_easy_date_dilemma/java/date-dillema && gradle test
   - cd $TRAVIS_BUILD_DIR/20151214_challenge_245_easy_date_dilemma/scala/date-dillema && sbt test
