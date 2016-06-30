@@ -9,7 +9,5 @@ jdk:
 sudo: false
 
 script:
-  - pwd
-  - ls ~/
-  - ls $HOME/
   - cd 20151214_challenge_245_easy_date_dilemma/java/date-dillema && gradle test
+  - cd ~/build/20151214_challenge_245_easy_date_dilemma/scala/date-dillema && sbt test
