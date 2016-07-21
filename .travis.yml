@@ -1,12 +1,18 @@
-language: scala
+sudo: false
 
-scala: 
-  - 2.11.2
+language: generic
 
 jdk:
   - oraclejdk8
 
-sudo: false
+matrix:
+    include:
+        - python: 3.5
+          os: linux
+          dist: trusty
+        - scal: 2.11.2
+          os: linux
+          dist: trusty
 cache:
   directories:
     - $HOME/.m2
