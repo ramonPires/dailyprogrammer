@@ -2,16 +2,18 @@ sudo: false
 
 language: generic
 
+scala: 
+  - 2.11.2
+
 jdk:
   - oraclejdk8
 
-matrix:
-    include:
-        - os: linux
-          python: 3.5
-          scala: 2.11.2
-          go: tip          
-          dist: trusty
+go:
+  - tip
+
+python:
+  - 3.5
+
 cache:
   directories:
     - $HOME/.m2
