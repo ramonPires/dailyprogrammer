@@ -10,7 +10,10 @@ matrix:
         - python: 3.5
           os: linux
           dist: trusty
-        - scal: 2.11.2
+        - scala: 2.11.2
+          os: linux
+          dist: trusty
+        - go: tip
           os: linux
           dist: trusty
 cache:
