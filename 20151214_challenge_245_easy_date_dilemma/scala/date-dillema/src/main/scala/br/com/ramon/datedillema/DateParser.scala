@@ -6,27 +6,17 @@ package br.com.ramon.datedillema
 class DateParser {
   def parse(input: String): String = {
     val splitedDate = splitDate(input)
-    var formatedDate = ""
-    if(splitedDate.head.length <= 2){
-      formatedDate = formatPatternMDY(splitedDate);
-    } else if (splitedDate.head.length == 4){
-      formatedDate = formatPatternYMD(splitedDate);
+    val formatedDate = splitedDate.head.length match {
+      case mdy if mdy <= 2 =>  formatPatternMDY(splitedDate)
+      case ymd if ymd == 4 =>  formatPatternYMD(splitedDate)
     }
     formatedDate
   }
 
   private def splitDate(date : String): Array[String] = {
-    if (date.indexOf('/') > -1) {
-      return date.split("/");
-    }
-
-    if (date.indexOf('-') > -1) {
-      return date.split("-");
-    }
-
-    if (date.indexOf(' ') > -1) {
-      return date.split(" ");
-    }
+       Array("/","-"," ").foreach { c =>
+         if (date.indexOf(c) > -1) return date.split(c)
+       }
     new Array[String](0)
   }
 
